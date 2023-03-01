@@ -2,6 +2,7 @@ package com.Forces23.learnspringframework.examples.e1;
 
 import java.util.Arrays;
 
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -13,7 +14,8 @@ class NormalClass {
 	
 }
 
-@Scope
+@Scope(value=ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+@Component
 class PrototypeClass {
 	
 }
@@ -27,7 +29,16 @@ public class BeanScopesLauncherApplication {
 		
 		try {
 			context = new AnnotationConfigApplicationContext(BeanScopesLauncherApplication.class);
-			Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+			
+			//hash code is always the same, due to it being the same instance
+			System.out.println(context.getBean(NormalClass.class));
+			System.out.println(context.getBean(NormalClass.class));
+			
+			//hash code is always unique, due to it creating a new instance every time
+			System.out.println(context.getBean(PrototypeClass.class));
+			System.out.println(context.getBean(PrototypeClass.class));
+			System.out.println(context.getBean(PrototypeClass.class));
+			
 			
 		}finally {
 			if(context != null) {

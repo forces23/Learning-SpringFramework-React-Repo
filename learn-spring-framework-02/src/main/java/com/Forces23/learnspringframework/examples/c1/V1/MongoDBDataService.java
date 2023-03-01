@@ -2,8 +2,10 @@ package com.Forces23.learnspringframework.examples.c1.V1;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+//@Component
+@Repository
 @Primary
 public class MongoDBDataService implements DataService{
 	public int[] retrieveData() {
