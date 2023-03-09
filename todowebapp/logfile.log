@@ -1,0 +1,39 @@
+2023-03-09 06:27:56.029 DEBUG 10216 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2023-03-09 06:27:56.053 DEBUG 10216 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-03-09 06:27:56.055 DEBUG 10216 --- [http-nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2023-03-09 06:27:56.055 DEBUG 10216 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2023-03-09 06:27:56.056 DEBUG 10216 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2023-03-09 06:27:56.065 DEBUG 10216 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-03-09 06:27:56.117 DEBUG 10216 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2023-03-09 06:27:56.119 DEBUG 10216 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Mar 09 06:27:56 CST 2023, status=404, error=Not Found, message=No message available,  (truncated)...]
+2023-03-09 06:27:56.185 DEBUG 10216 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2023-03-09 06:27:56.197 DEBUG 10216 --- [Live Reload #1] o.s.boot.devtools.livereload.Connection  : Established livereload connection [GET / HTTP/1.1
+Cache-Control: no-cache
+Connection: Keep-Alive
+Pragma: no-cache
+User-Agent: SecurityManagerAgent
+Host: 172.16.104.197:35729]
+2023-03-09 06:27:56.201 DEBUG 10216 --- [Live Reload #1] o.s.boot.devtools.livereload.Connection  : Established livereload connection [GET / HTTP/1.1
+Cache-Control: no-cache
+Connection: Keep-Alive
+Pragma: no-cache
+User-Agent: SecurityManagerAgent
+Host: 172.16.104.197:35729]
+2023-03-09 06:27:59.676 DEBUG 10216 --- [Live Reload #1] o.s.b.d.livereload.LiveReloadServer      : LiveReload error
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:313) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:340) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:789) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1025) ~[na:na]
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119) ~[na:na]
+	at org.springframework.boot.devtools.livereload.ConnectionInputStream.checkedRead(ConnectionInputStream.java:95) ~[spring-boot-devtools-2.7.9.jar:2.7.9]
+	at org.springframework.boot.devtools.livereload.ConnectionInputStream.readHeader(ConnectionInputStream.java:49) ~[spring-boot-devtools-2.7.9.jar:2.7.9]
+	at org.springframework.boot.devtools.livereload.Connection.<init>(Connection.java:74) ~[spring-boot-devtools-2.7.9.jar:2.7.9]
+	at org.springframework.boot.devtools.livereload.LiveReloadServer.createConnection(LiveReloadServer.java:237) ~[spring-boot-devtools-2.7.9.jar:2.7.9]
+	at org.springframework.boot.devtools.livereload.LiveReloadServer$ConnectionHandler.handle(LiveReloadServer.java:274) ~[spring-boot-devtools-2.7.9.jar:2.7.9]
+	at org.springframework.boot.devtools.livereload.LiveReloadServer$ConnectionHandler.run(LiveReloadServer.java:259) ~[spring-boot-devtools-2.7.9.jar:2.7.9]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
