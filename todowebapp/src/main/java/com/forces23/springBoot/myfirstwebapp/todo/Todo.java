@@ -2,11 +2,18 @@ package com.forces23.springBoot.myfirstwebapp.todo;
 
 import java.time.LocalDate;
 
+import javax.validation.constraints.FutureOrPresent;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Todo {
 	private int id;
 	private String username;
+	@Size(min=3, message="must be atleast 3 characters.")
 	private String description;
+	@FutureOrPresent
 	private LocalDate targetdate;
+	@NotNull
 	private boolean done;
 
 	public Todo(int id, String username, String description, LocalDate targetdate, boolean done) {
