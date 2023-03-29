@@ -1,5 +1,5 @@
-export default function FirstComponent(){
+export default function SecondComponent(){
     return(
-      <div className="FirstComponent">FirstComponent</div>
+      <div className="SecondComponent">SecondComponent</div>
     )
   }

@@ -1,40 +1,23 @@
 
 import './App.css';
-import { Component } from 'react';
-import FirstComponent from './components/learning-examples/FirstComponent';
+
+import LearningComponent from './components/learning-examples/LearningComponents';
+
 
 function App() {
   return (
     <div className="App">
-      <FirstComponent/>
-      <SecondComponent/>
-      <ThrirdComponent/>
-      <FourthComponent/>
+      <LearningComponent/>
+      
     </div>
   );
 }
 
-function SecondComponent(){
-  return(
-    <div className="SecondComponent">SecondComponent</div>
-  )
-}
 
-class ThrirdComponent extends Component{
-  render(){
-    return(
-      <div className="ThirdComponent">ThirdComponent</div>
-    )   
-  }
-}
 
-class FourthComponent extends Component{
-  render(){
-    return(
-      <div className="FourthComponent">FourthComponent</div>
-    )   
-  }
-}
+
+
+
 
 
 export default App;
