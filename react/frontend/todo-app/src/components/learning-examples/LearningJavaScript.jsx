@@ -7,8 +7,8 @@ const person = {
     },
     profiles: ['twitter','linkedin','instagram'],
     printProfile: ()=>{
-        person.map(
-            (profile)=>{
+        person.profiles.map(
+            (profile) => {
                 console.log(profile)
             }
         )
@@ -25,7 +25,7 @@ export default function LearningJavaScript(){
             <div>{person.address.city}</div>
             <div>{person.address.country}</div>
             <div>{person.profiles[0]}</div>
-            <div>{person.printProfile}</div>
+            <div>{ person.printProfile() }</div>
         </>
     )
 }
