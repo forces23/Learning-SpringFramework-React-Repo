@@ -13,3 +13,17 @@
     padding: 20px;
     border-width: 3px;
 }
+
+.resetButton {
+    font-size: 18px;
+    background-color: #b5792b;
+    width: 200px;
+    margin: 10px;
+    color: white;
+    padding: 15px;
+    border-radius: 30px;
+}
+
+.totalCounter {
+    color: green;
+}
