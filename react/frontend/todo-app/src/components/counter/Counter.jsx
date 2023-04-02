@@ -25,13 +25,11 @@ export default function Counter(){
                 <>
                         <CounterButton by={1} 
                                 incrementCounterParentFunction={incrementCounterParentFunction} 
-                                decrementCounterParentFunction={decrementCounterParentFunction} 
-                                ResetCounterParentFunction={ResetCounterParentFunction}
+                                decrementCounterParentFunction={decrementCounterParentFunction}
                         />
                         <CounterButton by={2} 
                                 incrementCounterParentFunction={incrementCounterParentFunction} 
                                 decrementCounterParentFunction={decrementCounterParentFunction} 
-                                ResetCounterParentFunction={ResetCounterParentFunction}
                         />
                         <CounterButton by={5} 
                                 incrementCounterParentFunction={incrementCounterParentFunction} 

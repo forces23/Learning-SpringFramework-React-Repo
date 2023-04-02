@@ -2,26 +2,14 @@ import { PropTypes } from 'prop-types'
 
 export default function CounterButton({by, incrementCounterParentFunction, decrementCounterParentFunction, ResetCounterParentFunction}) {
 
-    function incrementCounterFunction(){
-            console.log('!!! increment clicked !!!')
-            incrementCounterParentFunction(by)
-    }
-
-    function decrementCounterFunction(){
-            console.log('!!! decrement clicked !!!')
-            decrementCounterParentFunction(by)
-    }
-
-    
-
     return (
             <div className="counter">
                     <div>
                     <button className="counterButton"
-                            onClick={incrementCounterFunction}   
+                            onClick={() => incrementCounterParentFunction(by)}   
                     >+{by}</button>
                     <button className="counterButton"
-                            onClick={decrementCounterFunction}
+                            onClick={() => decrementCounterParentFunction(by)}
                     >-{by}</button>
                     </div>
             </div>
