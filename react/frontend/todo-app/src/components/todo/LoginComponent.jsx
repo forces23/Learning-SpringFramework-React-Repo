@@ -1,10 +1,11 @@
 import {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
+import { useAuth } from './security/AuthContext'
 
 export default function LoginComponent(){
     const [username, setUsername] = useState('forces23')
     const [password, setPassword] = useState('')
-    const [showSuccessMsg, setShowSuccessMsg] = useState(false)
+    const authContext = useAuth()
     const [showErrorMsg, setShowErrorMsg] = useState(false)
 
     const navigate = useNavigate();
@@ -15,23 +16,18 @@ export default function LoginComponent(){
 
     function handlePasswordChange(event){
         setPassword(event.target.value)
-        //console.log(password)
     }
 
     function handleCredCheck(){
-        if (username==='forces23' && password==='dummy'){
-            console.log('success')
-            setShowSuccessMsg(true)
-            setShowErrorMsg(false)
+        
+        if (authContext.login(username,password)){
+            console.log('login : success')
             navigate(`/welcome/${username}`)
         }
         else{
-            console.log('failed')
-            setShowErrorMsg(true)
-            setShowSuccessMsg(false)
+            console.log('login : failed')
         }
-        console.log(username)
-        console.log(password)
+
     }
 
 
@@ -40,7 +36,6 @@ export default function LoginComponent(){
             <div className="LoginForm">
                 <h1>Time To Login</h1>
                 {/* <form className="LoginFormData"> */}
-                    {showSuccessMsg && <div className="sucessMessage">Authentication Successful</div>}
                     {showErrorMsg && <div className="errorMessage">Authentication Failed. Username or password is inccorrect</div>}
                     <div>
                         <label>User Name: </label>
