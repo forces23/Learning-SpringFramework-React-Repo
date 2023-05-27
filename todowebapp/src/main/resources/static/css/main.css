@@ -1,0 +1,8 @@
+@charset "ISO-8859-1";
+body{
+	background: radial-gradient(circle farthest-side, #27023F, #000);
+	color: #fff;
+}
+table{
+	color: #fff !important;
+}

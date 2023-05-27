@@ -18,16 +18,21 @@ public class Todo {
 	@Size(min=3, message="must be atleast 3 characters.")
 	private String description;
 	@FutureOrPresent
-	private LocalDate targetdate;
+	private LocalDate targetDate;
 	@NotNull
 	private boolean done;
 
-	public Todo(int id, String username, String description, LocalDate targetdate, boolean done) {
+	public Todo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Todo(int id, String username, String description, LocalDate targetDate, boolean done) {
 		super();
 		this.id = id;
 		this.username = username;
 		this.description = description;
-		this.targetdate = targetdate;
+		this.targetDate = targetDate;
 		this.done = done;
 	}
 
@@ -55,12 +60,12 @@ public class Todo {
 		this.description = description;
 	}
 
-	public LocalDate getTargetdate() {
-		return targetdate;
+	public LocalDate gettargetDate() {
+		return targetDate;
 	}
 
-	public void setTargetdate(LocalDate targetdate) {
-		this.targetdate = targetdate;
+	public void settargetDate(LocalDate targetDate) {
+		this.targetDate = targetDate;
 	}
 
 	public boolean isDone() {
@@ -73,8 +78,8 @@ public class Todo {
 
 	@Override
 	public String toString() {
-		return "Todo [id=" + id + ", username=" + username + ", description=" + description + ", targetdate="
-				+ targetdate + ", done=" + done + "]";
+		return "Todo [id=" + id + ", username=" + username + ", description=" + description + ", targetDate="
+				+ targetDate + ", done=" + done + "]";
 	}
 
 }

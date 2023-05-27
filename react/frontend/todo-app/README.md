@@ -80,6 +80,12 @@ need to install :
 
     react-dom
         npm install react-dom
-        
+
     react-dom-router
         npm install react-dom-router
+
+to run : 
+    1. navigate to the location of the app in file manager
+    2. right click open cmd here 
+    3. start the react app
+        - npm start

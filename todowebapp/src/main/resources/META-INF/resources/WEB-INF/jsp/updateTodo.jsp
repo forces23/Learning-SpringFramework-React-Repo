@@ -13,9 +13,9 @@
 		<!--### Add a text field for a comment / description to give more details about the todo ###-->
 
 		<fieldset class="mb-3">
-			<form:label path="targetdate">Target Date: </form:label>
-			<form:input type="text" path="targetdate" id="targetdate" />
-			<form:errors type="text" path="targetdate" cssClass="text-warning" />
+			<form:label path="targetDate">Target Date: </form:label>
+			<form:input type="text" path="targetDate" id="targetDate" />
+			<form:errors type="text" path="targetDate" cssClass="text-warning" />
 		</fieldset>
 
 		<fieldset class="mb-3">
@@ -31,7 +31,7 @@
 </div>
 <%@ include file="common/footer.jspf" %>
 <script type="text/javascript">
-	$('#targetdate').datepicker({
+	$('#targetDate').datepicker({
 		format : 'yyyy-mm-dd'
 	});
 </script>
